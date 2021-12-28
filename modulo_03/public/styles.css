@@ -1,0 +1,172 @@
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap";
+
+:root {                           /* Variavel para cor */
+    --color-green:#50fa7b;
+    --color-rocket:#7159c1;
+}
+
+* {               /* com esse "*" podemos restar a pagina de html e configurar como quisermos elas. */             
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {                                               /* Formataçao do corpo do texto */
+  background:#282a36;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+header {                                  /* cabeça do documento */
+ padding: 32px;  /* espacamento que esse bloco de conteudo vai ter*/
+ font-weight: bold;
+ border-bottom: 1px solid #333;   /* borda de baixo com 1 px de lagura e tipo solid com cor black*/
+ background: rgba(0, 0, 0, 0.1);   /* cor de fundo */
+ 
+ 
+
+}
+
+.links {
+ text-align: center;  /* alinhado ao centro*/
+ 
+}
+
+.links a {           
+ color: white;
+ font-size: 18px;
+ text-decoration: none;      
+ line-height: 28px;    /* espaco entre linhas*/
+ margin:0 16px;      /* margin onde 0 topo e baixo, mais esquerda e direita com com 16px*/
+ 
+}
+
+.links  a:hover {                      
+    color:var(--color-green);
+    transition: color 200ms;
+}
+
+#wrapper {
+    text-align: center;
+    margin: 32px;
+
+}
+
+#wrapper img {
+    border-radius: 50%;                        /* arredondamento da foto*/
+    border:5px solid var(--color-green);       /* definindo a borda */
+    height: 200px;    /* tamanho da imagem*/
+
+}
+
+#wrapper h1 {
+    font-size: 42px;          /* tamaho da fonte*/
+    line-height: 52px;           /* espaçamento entre linhas*/
+    font-weight: bold;        /* peso da fonte, possibilitando ele ficar mais grossa*/
+}
+#wrapper h2 {
+    font-size: 24px;          
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;             /* opacidade da fonte da letra, deixando mais clara*/
+}
+#wrapper p {
+    margin-top: 10px;
+    margin: 32 auto;
+    font-size: 24px;
+    line-height: 34px;
+    
+    
+}
+
+#wrapper p a {
+        color:var(--color-green) ;     /*  variavel para cor do que for p e a do wrapper*/
+}
+
+#links-footer a {      
+    border-bottom: 1px solid var(--color-green) ;   /*  borda de baixo da a com 1px de largura e tipo solid e com o uso da variavel de cor*/
+    
+}
+
+/* === estilizaçao dos CARDS === */
+
+.cards {
+    max-width: 800px;       /* maximo de largura que o card pode ser exibido */
+    margin: 0 auto;     /*   Posicionando o card no meio da tela*/
+    display: grid;      /* posiciona o card em grid */
+    grid-template-columns: 1fr 1fr 1fr; /* posiciona o card em tres colunas */
+    gap:20px;    /* coloca um espaco entre os cards de 20px */
+}
+
+.card {
+    background-color: var(--color-rocket);   /*   cor de fundo do card */
+    display: grid;
+}
+
+.card__image-container img{       
+    width: 100%;               /*  largura da imagem pertencente a classe ".card__image-container" e essa imagem vai respeitar a largura da classe pai o "cards que é de 800px de max-width */  
+}
+
+.card__content,     /*  com esse tipo de referencia nas classes nos colocamos paddin em duas classes */
+.cards__info {
+    padding: 24px;
+}
+
+.cards__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* posicsionamento das colunas omde sera em duas colunas e as mesmas larguras */
+    align-items: center;
+
+}
+
+.card__price{
+    background-color: var(--color-rocket);  
+    filter: brightness(90%);    /* brilho de 90% */
+    padding: 5px 20px;   /* espaçamenmto */
+    border-radius: 20px;  /* arredondamento de cantos */
+    text-align: center;   /* texto alinhado em centro */
+}
+
+/* == MODAL == */
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal{
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh;  /* visão da altura (height) */
+    position: relative;    /* Colocamos o modal na posição relative para que o a clase modal possa ficar como absolute e assim mexer no "closed" */       
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;   /* esta em position absolute para que possa mexer o posicionamento do closed dentro do bloco do modal */
+    right: 8px;    /* colocanto o closed na direita com 8px de espaçamento */
+    top: 8px;   /* posicionamento do topo do closed com 8px */
+    cursor: pointer;   /* para aparecer o cursor "maosinha" ao passar sobre o closed */
+    
+
+}
+
+/* == MODAL.ACTIVE == */
+
+.modal-overlay.active{
+ opacity: 1;
+ visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    
+}
+

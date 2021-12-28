@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2? family = Roboto: ital, wght @ 0,100; 0,300; 0,400; 0,700; 1,700 & display = swap " rel="stylesheet ">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <div class="logo"><img src="./layouts/assets/logo.png" alt="logo-empresa">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./receitas.html">Receitas</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- END HEADER -->
+
+
+<!-- SECTION MAIS ACESSADAS -->
+<section id="mais_acessadas">
+    <div class="container">
+        <h2>Receitas</h2>
+    </div>
+    <div class="container">
+        <div class="grid">
+
+            <div class="card">
+                <img src="./layouts/assets/asinhas.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./layouts/assets/espaguete.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./layouts/assets/doce.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./layouts/assets/lasanha.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./layouts/assets/pizza.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./layouts/assets/burger.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./layouts/assets/espaguete.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="./layouts/assets/doce.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="./layouts/assets/lasanha.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="./layouts/assets/pizza.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./layouts/assets/pizza.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./layouts/assets/pizza.png" alt="">
+                <div class="content_text">
+                    <h3>Triplo bacon burguer</h3>
+                    <p>por Jorge Relato</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION MAIS ACESSADAS -->
+
+<!-- MODAL -->
+<div class="modal">
+    <div class="modal-container">
+        <img class="center" id="modal-img" src="" alt="IMAGEM DO MODAL" />
+        <p id="text"></p>
+        <a class="center" href="">Fechar modal</a>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p>Todos direitos reservados, receitas Foodfy.</p>
+    </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+    $(".card").click(function () {
+        var img = $(this).find("img").attr("src") //PEGAR
+        var text = $(this).find(".content_text").text()
+        // ABRIR MODAL
+        $(".card").attr('src', img); //SETAR
+        $("#text").text(text);
+        $(".modal").fadeIn();
+        // REMOVER SCROLL DA PAGINA
+        $("body").css("overflow", "hidden");
+    });
+
+    $(".img").attr('img')
+    // $(".modal").fadeOut();
+
+</script>
+
+
+</body>
+</html>

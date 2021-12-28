@@ -1,0 +1,43 @@
+
+
+header{
+    
+    text-align: center;
+    background: black;
+    padding: 30px;
+    margin:30px;
+    margin-top: -20px;
+    margin: -20px;
+    
+}
+
+
+header a {
+    padding: 30px;
+    color: blueviolet;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 1s;
+    text-align: center;
+    
+}
+
+
+header a:hover {
+    color: chartreuse;
+}
+body{
+    background: blueviolet;
+}
+
+section{
+
+    text-align: center;
+    margin-top: 70px;
+    font-family: roboto, sans-serif;
+}
+
+p{
+    color: chartreuse;
+}
